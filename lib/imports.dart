@@ -6,6 +6,7 @@ export 'package:percent_indicator/percent_indicator.dart';
 
 // model imports
 export 'package:freemedium/models/homePage/homePageModel.dart';
+export 'package:freemedium/models/articleViewPage/articleViewPageModel.dart';
 
 // page imports
 export 'package:freemedium/pages/homePage/homePage.dart';

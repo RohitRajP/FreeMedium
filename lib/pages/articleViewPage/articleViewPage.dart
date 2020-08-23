@@ -1,5 +1,5 @@
 import 'package:freemedium/imports.dart';
-import 'package:freemedium/global/controllers/articleViewPage/articleViewPageControllers.dart';
+import './widgets.dart' as widgets;
 
 /// holds the class for the ArticleViewPage
 class ArticleViewPage extends StatefulWidget {
@@ -25,24 +25,16 @@ class _ArticleViewPageState extends State<ArticleViewPage> {
   Widget _pageBody() {
     return SafeArea(
       child: Container(
-        child: InAppWebView(
-          initialUrl: widget._articleInformation["url"],
-          onWebViewCreated: (controller) {
-            articleViewWebViewController = controller;
-          },
-          initialOptions: InAppWebViewGroupOptions(
-            crossPlatform: InAppWebViewOptions(
-              useShouldOverrideUrlLoading: true,
-              incognito: true,
-              userAgent:
-                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+        child: Stack(
+          children: [
+            widgets.webViewW(
+              webViewUrl: widget._articleInformation["url"],
+              context: context,
             ),
-          ),
-          shouldOverrideUrlLoading:
-              (controller, shouldOverrideUrlLoadingRequest) async {
-            print("urlLOADING: ${shouldOverrideUrlLoadingRequest.url}");
-            return await ShouldOverrideUrlLoadingAction.ALLOW;
-          },
+            Container(
+              child: widgets.loadingProgressIndicator(),
+            )
+          ],
         ),
       ),
     );

@@ -45,10 +45,21 @@ class _HomePageState extends State<HomePage> {
           },
           shouldOverrideUrlLoading:
               (controller, shouldOverrideUrlLoadingRequest) async {
-            print("urlLOADING: ${shouldOverrideUrlLoadingRequest.url}");
-            Navigator.pushNamed(context, "/articleViewPage",
-                arguments: {"url": shouldOverrideUrlLoadingRequest.url});
-            return await ShouldOverrideUrlLoadingAction.CANCEL;
+            // getting url loaded
+            String _loadedUrl = shouldOverrideUrlLoadingRequest.url;
+            print("urlLOADING: $_loadedUrl");
+
+            // // checking condition to validate naviagation to another page
+            // if (!_loadedUrl.startsWith("https://accounts.google") &&
+            //     !_loadedUrl.startsWith("https://medium.com/m/connect/google")) {
+            //   // pushing URL to next page
+            //   Navigator.pushNamed(context, "/articleViewPage",
+            //       arguments: {"url": shouldOverrideUrlLoadingRequest.url});
+            //   // cancelling redirect in the current page
+            //   return await ShouldOverrideUrlLoadingAction.CANCEL;
+            // } else {
+            return await ShouldOverrideUrlLoadingAction.ALLOW;
+            //}
           },
         ),
       ),
