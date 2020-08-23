@@ -5,6 +5,7 @@ export 'package:provider/provider.dart';
 // model imports
 
 // page imports
+export 'package:freemedium/pages/homePage/homePage.dart';
 
 // global imports
 export 'package:freemedium/global/globalData.dart';
