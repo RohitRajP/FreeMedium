@@ -1,6 +1,7 @@
 // package imports
 export 'package:flutter/material.dart';
 export 'package:provider/provider.dart';
+export 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 // model imports
 
