@@ -1,7 +1,9 @@
 import 'package:freemedium/imports.dart';
 import 'package:freemedium/models/articleViewPage/articleViewPageModel.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 /// holds the main entrypoint class
 class MyApp extends StatelessWidget {

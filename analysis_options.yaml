@@ -5,3 +5,4 @@ linter:
     file_names: false
     omit_local_variable_types: false
     avoid_setters_without_getters: false
+    lines_longer_than_80_chars: false

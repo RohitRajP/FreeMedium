@@ -27,6 +27,7 @@ dependencies:
   provider: ^4.3.2+1
   flutter_inappwebview: ^4.0.0+4
   percent_indicator: ^2.1.5
+  shared_preferences: ^0.5.10
 
 dev_dependencies:
   flutter_test:
