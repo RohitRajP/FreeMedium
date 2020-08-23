@@ -9,6 +9,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: GlobalThemes().themeData,
       home: HomePage(),
+      routes: {
+        '/homePage': (context)=>HomePage(),
+        '/articleViewPage': (context)=>ArticleViewPage(ModalRoute.of(context).settings.arguments)
+      },
     );
   }
 }

@@ -7,6 +7,7 @@ export 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 // page imports
 export 'package:freemedium/pages/homePage/homePage.dart';
+export 'package:freemedium/pages/articleViewPage/articleViewPage.dart';
 
 // global imports
 export 'package:freemedium/global/globalData.dart';
