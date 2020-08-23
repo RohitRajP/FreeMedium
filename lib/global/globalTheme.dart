@@ -6,6 +6,7 @@ class GlobalThemes {
   static final Map<String, Color> _colorConstants = {
     "primaryColor": Colors.indigo,
     "accentColor": Colors.indigoAccent,
+    "primaryWhite": Colors.white,
   };
 
   // holds the ThemeData for the application

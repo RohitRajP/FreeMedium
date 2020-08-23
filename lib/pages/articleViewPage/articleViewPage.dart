@@ -1,4 +1,5 @@
 import 'package:freemedium/imports.dart';
+import 'package:freemedium/global/controllers/articleViewPage/articleViewPageControllers.dart';
 
 /// holds the class for the ArticleViewPage
 class ArticleViewPage extends StatefulWidget {
@@ -26,6 +27,9 @@ class _ArticleViewPageState extends State<ArticleViewPage> {
       child: Container(
         child: InAppWebView(
           initialUrl: widget._articleInformation["url"],
+          onWebViewCreated: (controller) {
+            articleViewWebViewController = controller;
+          },
           initialOptions: InAppWebViewGroupOptions(
             crossPlatform: InAppWebViewOptions(
               useShouldOverrideUrlLoading: true,
@@ -37,7 +41,7 @@ class _ArticleViewPageState extends State<ArticleViewPage> {
           shouldOverrideUrlLoading:
               (controller, shouldOverrideUrlLoadingRequest) async {
             print("urlLOADING: ${shouldOverrideUrlLoadingRequest.url}");
-            return await ShouldOverrideUrlLoadingAction.CANCEL;
+            return await ShouldOverrideUrlLoadingAction.ALLOW;
           },
         ),
       ),

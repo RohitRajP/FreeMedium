@@ -2,8 +2,10 @@
 export 'package:flutter/material.dart';
 export 'package:provider/provider.dart';
 export 'package:flutter_inappwebview/flutter_inappwebview.dart';
+export 'package:percent_indicator/percent_indicator.dart';
 
 // model imports
+export 'package:freemedium/models/homePage/homePageModel.dart';
 
 // page imports
 export 'package:freemedium/pages/homePage/homePage.dart';
